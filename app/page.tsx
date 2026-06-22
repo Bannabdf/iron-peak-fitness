@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/65" />
 
         {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-6 tracking-tight leading-tight">
             Unleash Your Potential
           </h1>
@@ -91,8 +91,8 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-background">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 bg-background">
+        <div className="max-w-6xl mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-foreground mb-14 tracking-tight">
             Why Choose Iron Peak
           </h2>
@@ -116,8 +116,8 @@ export default function Home() {
       </section>
 
       {/* Membership Preview */}
-      <section className="py-20 px-4 bg-secondary">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 bg-secondary">
+        <div className="max-w-6xl mx-auto">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-foreground mb-14 tracking-tight">
             Choose Your Plan
           </h2>
@@ -125,32 +125,34 @@ export default function Home() {
             {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`bg-background rounded-lg p-8 flex flex-col ${
+                className={`bg-background rounded-lg p-8 flex flex-col justify-between ${
                   plan.highlighted
                     ? "border-2 border-accent ring-1 ring-accent/50"
                     : "border border-white/10"
                 }`}
               >
-                <h3 className="font-heading text-2xl font-bold text-foreground mb-2 tracking-wider">
-                  {plan.name}
-                </h3>
-                <div className="mb-6">
-                  <span className="font-heading text-4xl font-extrabold text-accent">
-                    ${plan.price}
-                  </span>
-                  <span className="font-body text-sm text-white/60">/mo</span>
+                <div>
+                  <h3 className="font-heading text-2xl font-bold text-foreground mb-2 tracking-wider">
+                    {plan.name}
+                  </h3>
+                  <div className="mb-6">
+                    <span className="font-heading text-4xl font-extrabold text-accent">
+                      ${plan.price}
+                    </span>
+                    <span className="font-body text-sm text-white/60">/mo</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="font-body text-sm text-white/80 flex items-start gap-2"
+                      >
+                        <span className="text-accent mt-0.5">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="space-y-3 mb-8 flex-1">
-                  {plan.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="font-body text-sm text-white/80 flex items-start gap-2"
-                    >
-                      <span className="text-accent mt-0.5">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
                 <Link
                   href="/membership"
                   className={`block text-center font-heading font-bold text-sm px-6 py-3 rounded tracking-wider uppercase transition-colors ${
@@ -168,8 +170,8 @@ export default function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-accent py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-accent py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-background mb-6 tracking-tight">
             Ready to Start?
           </h2>

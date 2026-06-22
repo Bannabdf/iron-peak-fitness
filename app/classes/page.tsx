@@ -59,8 +59,8 @@ export default function ClassesPage() {
   return (
     <>
       {/* Header */}
-      <section className="py-20 px-4 bg-background border-b border-white/10">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="pt-24 pb-12 px-6 bg-background border-b border-white/10">
+        <div className="max-w-6xl mx-auto text-center">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground mb-4 tracking-tight">
             Our Classes
           </h1>
@@ -72,8 +72,8 @@ export default function ClassesPage() {
       </section>
 
       {/* Classes Grid */}
-      <section className="py-20 px-4 bg-secondary">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 bg-secondary">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {classesList.map((cls) => (
               <div
