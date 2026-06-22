@@ -32,9 +32,9 @@ export default function RootLayout({
       lang="en"
       className={`${barlow.variable} ${barlowCondensed.variable}`}
     >
-      <body className="bg-background text-foreground font-body min-h-screen flex flex-col">
+      <body className="bg-background text-foreground font-body min-h-screen w-full flex flex-col">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="w-full flex-1">{children}</main>
         <Footer />
       </body>
     </html>
