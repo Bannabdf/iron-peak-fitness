@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center overflow-hidden">
+      <section className="relative w-full min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center text-center overflow-hidden">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -91,8 +91,8 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-6 bg-background">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-foreground mb-14 tracking-tight">
             Why Choose Iron Peak
           </h2>
@@ -116,8 +116,8 @@ export default function Home() {
       </section>
 
       {/* Membership Preview */}
-      <section className="py-20 px-6 bg-secondary">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full py-20 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-center text-foreground mb-14 tracking-tight">
             Choose Your Plan
           </h2>
@@ -170,8 +170,8 @@ export default function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-accent py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="w-full bg-accent py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-extrabold text-background mb-6 tracking-tight">
             Ready to Start?
           </h2>

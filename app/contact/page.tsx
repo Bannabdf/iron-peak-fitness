@@ -4,8 +4,8 @@ export default function ContactPage() {
   return (
     <>
       {/* Header */}
-      <section className="pt-24 pb-12 px-6 bg-background border-b border-white/10">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="w-full pt-24 pb-12 bg-background border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground mb-4 tracking-tight">
             Get In Touch
           </h1>
@@ -17,8 +17,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 px-6 bg-secondary">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="w-full py-20 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Form */}
           <ContactForm />
 
